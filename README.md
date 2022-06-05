@@ -1,1 +1,1 @@
-# IrisFlowerPrediction
+# CustomerPredictorApp

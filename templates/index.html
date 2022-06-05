@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Iris Flower Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Iris Flower Predictor</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        Enter Sepal Length: <input type="text" name="sepalLength" placeholder="Enter Sepal Length: " required="required" /><br>
+        Enter Sepal Width: <input type="text" name="sepalWidth" placeholder="Enter Sepal Width " required="required" /><br>
+        Enter Petal Length: <input type="text" name="petalLength" placeholder="Enter Petal Length " required="required" /><br>
+        Enter Petal Width: <input type="text" name="petalWidth" placeholder="Enter Petal Width " required="required" /><br>
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Iris Flower</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
